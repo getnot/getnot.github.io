@@ -1,0 +1,41 @@
+
+.container-main {
+    height: 100%;
+    background-color: bisque;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .container-main {
+        background-color: bisque;
+        text-align: center;
+    }
+  }
+
+.container-main button{
+    display: inline-block;
+    background-color: rgb(192, 182, 182);
+    border-radius: 20px;
+    margin: 1rem;
+    /* padding: 10px 10px 3rem 3rem; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: #eeeeee;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 992px) {
+    .container-main button{
+        display: inline-block;
+        background-color: rgb(192, 182, 182);
+        border-radius: 20px;
+        margin: 1rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #eeeeee;
+        text-align: center;
+    }
+  }

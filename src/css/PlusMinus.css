@@ -1,0 +1,91 @@
+.plus-minus {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.game-header{
+    text-align: center;
+    background-color: grey;
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.game-header-text {
+   background-color: green;
+   text-align: center;
+   margin: 10px;
+   padding: 10px;
+   border-radius: 10px;
+}
+
+.game-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 992px) {
+    .game-bar {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1rem;
+        justify-content: space-around;
+    }
+  }
+
+
+.players-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.player-box {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.player {
+    text-align: left;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: lightsalmon;
+    border: 1px dotted lightskyblue;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .players-box {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .player-box {
+        margin: 1rem;
+    }
+  }
+
+.scoreList {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: lightsalmon;
+    border: 1px dotted lightskyblue;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .scoreList {
+        display: none;
+    }
+  }
+
+
+.scoreList ul{
+    list-style-type: none;
+}
