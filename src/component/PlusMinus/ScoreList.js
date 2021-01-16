@@ -1,8 +1,11 @@
 function ScoreList(props) {
+  
+  var sl = props.scoreList;
+
   return (
     <div className="scoreList">
       <ul>
-        {props.scoreList.reverse().map((item) => (<li>{item}</li>))}
+        {sl.reverse().map((item,index) => (<li key={index}>{item}</li>))}
       </ul>
     </div>
   );

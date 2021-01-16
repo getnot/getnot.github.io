@@ -13,6 +13,12 @@
     padding-bottom: 1rem;
 }
 
+@media screen and (max-width: 992px) {
+    .game-header{
+        display: none;
+    }
+}
+
 .game-bar {
     display: flex;
     flex-flow: row nowrap;
@@ -34,8 +40,10 @@
 @media screen and (max-width: 992px) {
     .game-bar {
         display: flex;
-        flex-flow: column nowrap;
-        padding: 1rem
+        flex-flow: row nowrap;
+        padding: 1rem;
+        justify-content: center;
+        /* overflow: auto; */
     }
     .game-bar-text {
         border-radius: 100%;

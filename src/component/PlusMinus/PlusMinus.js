@@ -31,52 +31,60 @@ function PlusMinus() {
     scoreList:[]
   });
 
+  const [playerInLead,setPlayerInLead] = useState("");
+  const [playerLosing,setPlayerLosing] = useState("");
+
 
  const updateList = (list, data) => {
-  list.push(data);
+  list.unshift(data);
   return list;
  }
- const popLastEntry = (list, data) => {
-  list.pop(data);
+ const popLastEntry = (list) => {
+  list.shift();
   return list;
  }
    
 const submitHandler = (event) => {
 
+  checkWinner();
+
   setPlayer1(prev => ({ ...prev, 
     totalScore:prev.totalScore+Number(prev.tempScore),
-    scoreList:updateList(prev.scoreList,prev.tempScore)
+    scoreList:updateList(prev.scoreList,prev.tempScore),
+    tempScore:0
   }));
   setPlayer2(prev => ({ ...prev, 
     totalScore:prev.totalScore+Number(prev.tempScore),
-    scoreList:updateList(prev.scoreList,prev.tempScore)
+    scoreList:updateList(prev.scoreList,prev.tempScore),
+    tempScore:0
   }));
   setPlayer3(prev => ({ ...prev, 
     totalScore:prev.totalScore+Number(prev.tempScore),
-    scoreList:updateList(prev.scoreList,prev.tempScore)
+    scoreList:updateList(prev.scoreList,prev.tempScore),
+    tempScore:0
   }));
   setPlayer4(prev => ({ ...prev, 
     totalScore:prev.totalScore+Number(prev.tempScore),
-    scoreList:updateList(prev.scoreList,prev.tempScore)
+    scoreList:updateList(prev.scoreList,prev.tempScore),
+    tempScore:0
   }));
   console.log("final submit done")
-  checkWinner()
+
+  
 }
 
 const  checkWinner = () => {
-  if(player1.totalScore >= 21){
+  if(player1.totalScore + player1.tempScore >= 21){
     alert("player1 wins ");
     resetHandler();
-  }
-  if(player2.totalScore >= 21){
+  }else if(player2.totalScore + player2.tempScore >= 21){
     alert("player2 wins ");
     resetHandler();
-  }
-  if(player3.totalScore >= 21){
+  }else if(player3.totalScore + player3.tempScore >= 21){
     alert("player3 wins ");
     resetHandler();
   }
-  if(player4.totalScore >= 21){
+  else if(player4.totalScore + player4.tempScore>= 21){
     alert("player4 wins ");
     resetHandler();
   }  
@@ -101,7 +109,6 @@ const reverseLastEntry = (event) => {
     totalScore:prev.totalScore-prev.scoreList[prev.scoreList.length-1], 
     scoreList:popLastEntry(prev.scoreList,prev.tempScore)
   }));
-  console.log("final submit done")
 }
 
 const handleTempScoreChangePlayer1 = (event) => {
@@ -167,8 +174,8 @@ const resetHandler = (e) => {
         <h1>Plus-Minus</h1>
       </div>
       <div className="game-bar">
-        <h1 className= "game-bar-text" >player 1</h1>
-        <h1 className= "game-bar-text" style = {{background : "red"}}>player 4</h1>
+        {playerInLead ?  <h1 className= "game-bar-text" >{playerInLead}</h1> : null}
+        {playerLosing  ? <h1 className= "game-bar-text" style = {{background : "red"}}>{playerLosing}</h1> : null }
         <button onClick={submitHandler}>
           <b>submit</b>
         </button>

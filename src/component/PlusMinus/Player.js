@@ -22,14 +22,15 @@ function Player(props) {
 
   return (
     <div className="player">
-      <div>Player Name : {props.pp}</div>
+      <div>Player Name : {props.name}</div>
       <div>total score : {props.totalScore}</div>
       {/* <form onSubmit={submitHandler}>  */}
           Enter score : <input 
           type="Number" 
-          value={props.tempScore} 
+          value={props.tempScore === 0 ? "" : props.tempScore} 
           placeholder="please enter points" 
           required
+          max={11}
           onChange={props.changeHandler}/>
       {/* </form> */}
     </div>
