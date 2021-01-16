@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/score-card/static/css/main.7614556c.chunk.css",
-    "main.js": "/score-card/static/js/main.ec8add0b.chunk.js",
-    "main.js.map": "/score-card/static/js/main.ec8add0b.chunk.js.map",
+    "main.css": "/score-card/static/css/main.afad8bc3.chunk.css",
+    "main.js": "/score-card/static/js/main.e0332dfc.chunk.js",
+    "main.js.map": "/score-card/static/js/main.e0332dfc.chunk.js.map",
     "runtime-main.js": "/score-card/static/js/runtime-main.d2ff5bef.js",
     "runtime-main.js.map": "/score-card/static/js/runtime-main.d2ff5bef.js.map",
     "static/js/2.c49c48cb.chunk.js": "/score-card/static/js/2.c49c48cb.chunk.js",
     "static/js/2.c49c48cb.chunk.js.map": "/score-card/static/js/2.c49c48cb.chunk.js.map",
     "index.html": "/score-card/index.html",
-    "static/css/main.7614556c.chunk.css.map": "/score-card/static/css/main.7614556c.chunk.css.map",
+    "static/css/main.afad8bc3.chunk.css.map": "/score-card/static/css/main.afad8bc3.chunk.css.map",
     "static/js/2.c49c48cb.chunk.js.LICENSE.txt": "/score-card/static/js/2.c49c48cb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d2ff5bef.js",
     "static/js/2.c49c48cb.chunk.js",
-    "static/css/main.7614556c.chunk.css",
-    "static/js/main.ec8add0b.chunk.js"
+    "static/css/main.afad8bc3.chunk.css",
+    "static/js/main.e0332dfc.chunk.js"
   ]
 }
